@@ -19,12 +19,18 @@ public class LivingThing {
 
     }
 
-    //生存フラグ
+    /**
+     * 生存フラグを確認できるメソッド
+     * @return true or false
+     */
     public boolean isDead(){
         return dead;
     }
 
-    //攻撃メソッド
+    /**
+     * 攻撃をするメソッド
+     * @param opponent　攻撃したい敵のクラス
+     */
     public void attack(LivingThing opponent){
 
         if (dead == false){
@@ -35,7 +41,11 @@ public class LivingThing {
         }
     }
 
-    //ダメージメソッド
+    /**
+     * 受けたダメージを計算するメソッド
+     * 引数になる受けるダメージ量は，attackメソッドで計算する
+     * @param damage　受けるダメージ
+     */
     public void wounded(int damage) {
         hitPoint -= damage;
         if (hitPoint < 1) {
@@ -46,36 +56,61 @@ public class LivingThing {
 
     //getter一覧
 
-    public boolean getDead(){
-        return dead;
-    }
-
+    /**
+     * nameのゲッター
+     * @return name
+     */
     public String getName(){
         return name;
     }
 
+    /**
+     * hitPointのゲッター
+     * @return hitPoint
+     */
     public int getHitPoint(){
         return hitPoint;
     }
 
+    /**
+     * attackのゲッター
+     * @return attack
+     */
     public int getAttack(){
         return attack;
     }
 
     //setter一覧
 
+
+    /**
+     * hitPointのセッター
+     * @param hitPoint 変更したいhitPointの値
+     */
     public void setHitPoint(int hitPoint){
         this.hitPoint = hitPoint;
     }
 
+    /**
+     * attackのセッター
+     * @param attack 変更したいattackの値
+     */
     public void setAttack(int attack) {
         this.attack = attack;
     }
 
+    /**
+     * nameのセッター
+     * @param name 変更したいnameの文字列
+     */
     public void setName(String name) {
         this.name = name;
     }
 
+    /**
+     * deadのセッター
+     * @param dead 変更したいdeadの true  or false
+     */
     public void setDead(boolean dead) {
         this.dead = dead;
     }
