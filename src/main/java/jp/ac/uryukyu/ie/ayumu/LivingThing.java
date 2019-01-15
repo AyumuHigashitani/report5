@@ -14,7 +14,7 @@ public class LivingThing {
         this.hitPoint = hitPoint;
         this.attack = attack;
         this.dead = false;
-
+        
         System.out.printf("%sのHPは%d。攻撃力は%dです。\n", name, hitPoint, attack);
 
     }
