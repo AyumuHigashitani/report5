@@ -82,7 +82,6 @@ public class LivingThing {
 
     //setter一覧
 
-
     /**
      * hitPointのセッター
      * @param hitPoint 変更したいhitPointの値
